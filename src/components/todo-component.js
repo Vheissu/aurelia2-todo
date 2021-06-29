@@ -14,7 +14,7 @@ export class TodoComponent {
 
     newTodo(event) {
         if (event.which === 13) {
-            this.todos.push({ completed: false, text: this.todo });
+            this.todos.unshift({ completed: false, text: this.todo });
             this.todo = '';
         }
 
