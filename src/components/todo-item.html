@@ -1,0 +1,8 @@
+<bindable name="todo"></bindable>
+<bindable name="index"></bindable>
+<bindable name="deleteTodo"></bindable>
+
+<div class="todo-item">
+    <p>${todo.text}</p>
+    <button type="button" click.trigger="deleteTodo(index)">Delete -</button>
+</div>
