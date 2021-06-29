@@ -2,14 +2,14 @@ export class TodoComponent {
     todo = '';
 
     todos = [
-        { text: 'Build something with Aurelia 2' },
-        { text: 'Buy milk' },
-        { text: 'Joes birthday present for this Saturday' },
-        { text: 'Take out the garbage' }
+        { completed: false, text: 'Build something with Aurelia 2' },
+        { completed: false, text: 'Buy milk' },
+        { completed: false, text: 'Joes birthday present for this Saturday' },
+        { completed: false, text: 'Take out the garbage' }
     ];
 
     newTodo() {
-        this.todos.push({ text: this.todo });
+        this.todos.push({ completed: false, text: this.todo });
         this.todo = '';
     }
 
