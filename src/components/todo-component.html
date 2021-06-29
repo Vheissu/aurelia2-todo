@@ -4,13 +4,12 @@
     <h1>Aurelia 2 Todo</h1>
 
     <div class="todo-container">
-        <div class="todo-items">
-            <todo-item repeat.for="todo of todos" todo.bind="todo" index.bind="$index" delete-todo.call="deleteTodo($index)"></todo-item>
+        <div class="todo-compose">
+            <input type="text" value.bind="todo" keypress.trigger="newTodo($event)" placeholder="What do you want to do today?">
         </div>
 
-        <div class="todo-compose">
-            <input type="text" value.bind="todo">
-            <button type="button" click.trigger="newTodo()" disabled.bind="!todo.length">New todo +</button>
+        <div class="todo-items">
+            <todo-item repeat.for="todo of todos" todo.bind="todo" index.bind="$index" delete-todo.call="deleteTodo($index)"></todo-item>
         </div>
     </div>
 </div>
